@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const useField = type => {
     const [value, setValue] = useState('')
@@ -15,3 +15,5 @@ const useCountry = name => {
 
     return country
 }
+
+export { useField, useCountry}
