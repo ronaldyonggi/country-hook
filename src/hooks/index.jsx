@@ -7,3 +7,11 @@ const useField = type => {
 
     return { type, value, onChange}
 }
+
+const useCountry = name => {
+    const [country, setCountry] = useState(null)
+
+    useEffect(() => {})
+
+    return country
+}
