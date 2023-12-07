@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import countriesService from '../services/countries'
 
-const useField = type => {
+export const useField = type => {
     const [value, setValue] = useState('')
 
     const onChange = event => setValue(event.target.value)
@@ -9,7 +9,7 @@ const useField = type => {
     return { type, value, onChange}
 }
 
-const useCountry = name => {
+export const useCountry = name => {
     const [country, setCountry] = useState(null)
 
     useEffect(() => {
@@ -28,5 +28,3 @@ const useCountry = name => {
 
     return country
 }
-
-export { useField, useCountry}
